@@ -41,13 +41,13 @@ header {
 }
 
 .header-actions a i {
-    color: #fff;
+    color: var(--iconsColor);
     margin: 5px;
-    font-size: 30px;
+    font-size: var(--iconsSize);
 }
 
 .header-actions a:hover i {
-    color: #04396C;
+    color: var(--iconsColorHover);
 }
 
 main {

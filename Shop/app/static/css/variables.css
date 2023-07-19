@@ -4,6 +4,9 @@
     --headerHeight: 70px;
     --logoColor: #FFFFFF;
     --logoSize: 26px;
+    --iconsColor: #FFFFFF;
+    --iconsColorHover: #04396C;
+    --iconsSize: 30px;
 
     /* FOOTER */
     --footerBg: #26527C;
