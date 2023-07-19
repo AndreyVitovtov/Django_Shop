@@ -1,8 +1,18 @@
 {% extends 'main.html' %}
 
+{% block css_file %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+
 {% block title %}Cart | {% endblock %}
 
-
 {% block main %}
-<h1>CART</h1>
+    {% if data %}
+        {% for item in data %}
+            <li>{{ item.product_id }} - {{ item.count }}</li>
+        {% endfor %}
+    {% else %}
+        <div class="empty-cart"><i class="icon-warning-empty"></i> empty cart</div>
+    {% endif %}
 {% endblock %}

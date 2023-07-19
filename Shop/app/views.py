@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Cart
+
 
 # Create your views here.
 def home(req):
@@ -8,7 +10,9 @@ def home(req):
 
 
 def cart(req):
-    return HttpResponse(render(req, 'cart.html'))
+    return HttpResponse(render(req, 'cart.html', {
+        'data': Cart.objects.all()
+    }))
 
 
 def customer(req):
