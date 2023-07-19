@@ -1,16 +1,20 @@
+<!--{% load static %}-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}SHOP</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'icons/favicon.png' %}">
 </head>
 <body>
 <header>
     HEADER
 </header>
 <main>
-{% block main %}
-{% endblock %}
+    {% block main %}
+    {% endblock %}
 </main>
 <footer>
     FOOTER
