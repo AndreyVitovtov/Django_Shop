@@ -1,8 +1,72 @@
+@import url('variables.css');
+
+@font-face {
+    font-family: "Lugrasimo-Regular";
+    src: url('../fonts/Lugrasimo-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--headerBg);
+    height: var(--headerHeight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-logo a {
+    color: var(--logoColor);
+    font-size: var(--logoSize);
+    text-transform: uppercase;
+    font-family: 'Lugrasimo-Regular', sans-serif;
+}
+
+.header-actions a i {
+    color: #fff;
+    margin: 5px;
+    font-size: 30px;
+}
+
+.header-actions a:hover i {
+    color: #04396C;
+}
+
 main {
-    min-height: 90vh;
+    min-height: 70vh;
+}
+
+footer {
+    background-color: var(--footerBg);
+    height: var(--footerHeight);
+}
+
+.footer-content {
+    height: calc(var(--footerHeight) - 25px);
+}
+
+footer .copyright {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 5px;
 }

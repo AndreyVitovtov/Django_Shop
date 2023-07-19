@@ -1,0 +1,11 @@
+:root {
+    /* HEADER */
+    --headerBg: #408AD2;
+    --headerHeight: 70px;
+    --logoColor: #FFFFFF;
+    --logoSize: 26px;
+
+    /* FOOTER */
+    --footerBg: #26527C;
+    --footerHeight: 200px;
+}

@@ -6,18 +6,29 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}SHOP</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontello.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'icons/favicon.png' %}">
 </head>
 <body>
 <header>
-    HEADER
+    <div class="header-logo">
+        <a href="/">shop</a>
+    </div>
+    <div class="header-menu">
+        This should be the menu
+    </div>
+    <div class="flex-between header-actions">
+        <a href="/customer" class="customer"><i class="icon-user"></i></a>
+        <a href="/cart" class="cart"><i class="icon-cart"></i></a>
+    </div>
 </header>
-<main>
+<main class="flex-between">
     {% block main %}
     {% endblock %}
 </main>
 <footer>
-    FOOTER
+    <div class="footer-content"></div>
+    <div class="copyright">© 2023</div>
 </footer>
 </body>
 </html>
