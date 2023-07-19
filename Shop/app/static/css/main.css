@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .flex-between {
@@ -40,10 +41,60 @@ header {
     font-family: 'Lugrasimo-Regular', sans-serif;
 }
 
+.header-catalog {
+    display: inline-block;
+    padding: 10px;
+    color: var(--buttonTxtColor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: var(--buttonBgColor);
+    font-weight: bold;
+}
+
+.header-catalog:hover {
+    background-color: var(--buttonTxtColor);
+    color: var(--buttonTxtColorHover);
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+}
+
+.header-search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 550px;
+    height: 35px;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.header-search button {
+    height: 35px;
+    border: none;
+    margin-left: -5px;
+    padding: 7px;
+    border-radius: 0 5px 5px 0;
+    text-transform: uppercase;
+    color: var(--buttonTxtColor);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.header-search button:hover {
+    background-color: var(--buttonTxtColor);
+    color: var(--buttonTxtColorHover);
+}
+
 .header-actions a i {
     color: var(--iconsColor);
     margin: 5px;
     font-size: var(--iconsSize);
+    transition: 0.2s;
 }
 
 .header-actions a:hover i {
@@ -51,6 +102,23 @@ header {
 }
 
 main {
+    /* TODO: delete after adding content */
+    min-height: 70vh;
+}
+
+main .content {
+    display: flex;
+}
+
+main .main-catalog, main .main-content {
+    padding: 20px;
+}
+
+main .main-catalog {
+    width: 20%;
+    border-right: solid 1px var(--headerBg);
+    height: 100%;
+    /* TODO: delete after adding content */
     min-height: 70vh;
 }
 

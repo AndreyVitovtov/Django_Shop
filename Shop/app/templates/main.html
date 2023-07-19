@@ -15,20 +15,24 @@
         <a href="/">shop</a>
     </div>
     <div class="header-menu">
-        This should be the menu
+        <div class="header-catalog"><i class="icon-th-large-outline"></i> Catalog</div>
+    </div>
+    <div class="header-search">
+        <input type="text" name="search" placeholder="I'm looking for...">
+        <button>search</button>
     </div>
     <div class="flex-between header-actions">
         <a href="/customer" class="customer"><i class="icon-user"></i></a>
         <a href="/cart" class="cart"><i class="icon-cart"></i></a>
     </div>
 </header>
-<main class="flex-between">
+<main>
     {% block main %}
     {% endblock %}
 </main>
 <footer>
     <div class="footer-content"></div>
-    <div class="copyright">© 2023</div>
+    <div class="copyright">Homework "Django Shop" © 2023</div>
 </footer>
 </body>
 </html>

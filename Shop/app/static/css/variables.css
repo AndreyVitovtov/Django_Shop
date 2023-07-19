@@ -1,14 +1,19 @@
 :root {
     /* HEADER */
-    --headerBg: #408AD2;
+    --headerBg: #D3DEE9;
     --headerHeight: 70px;
-    --logoColor: #FFFFFF;
+    --logoColor: #EC6E5B;
     --logoSize: 26px;
-    --iconsColor: #FFFFFF;
-    --iconsColorHover: #04396C;
+    --iconsColor: #4d4d4d;
+    --iconsColorHover: #EC6E5B;
     --iconsSize: 30px;
 
+    --buttonTxtColor: #EC6E5B;
+    --buttonTxtColorHover: #FFFFFF;
+    --buttonBgColor: #F0F0F0;
+    --buttonBgColorHover: #EC6E5B;
+
     /* FOOTER */
-    --footerBg: #26527C;
+    --footerBg: #a3b9d2;
     --footerHeight: 200px;
 }
