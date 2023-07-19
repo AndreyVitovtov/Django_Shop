@@ -31,7 +31,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 var(--padding);
 }
 
 .header-logo a {
@@ -111,7 +111,7 @@ main .content {
 }
 
 main .main-catalog, main .main-content {
-    padding: 20px;
+    padding: 20px var(--padding);
 }
 
 main .main-catalog {
