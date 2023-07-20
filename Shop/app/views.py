@@ -101,10 +101,14 @@ def home(req):
 
 
 def cart(req):
+    data = Cart.objects.filter(customer_id=1)
     return HttpResponse(render(req, 'cart.html', {
-        'data': Cart.objects.filter(customer_id=1)
+        'data': data,
+        'count_in_cart': len(data)
     }))
 
 
 def customer(req):
-    return HttpResponse(render(req, 'customer.html'))
+    return HttpResponse(render(req, 'customer.html', {
+        'count_in_cart': Cart.objects.filter(customer_id=1).count()
+    }))

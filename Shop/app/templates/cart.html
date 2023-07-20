@@ -8,14 +8,39 @@
 {% block title %}Cart | {% endblock %}
 
 {% block cart %}
-    <span class="count-products-in-cart">2</span>
+    <span class="count-products-in-cart">{{ count_in_cart }}</span>
 {% endblock %}
 
 {% block main %}
     {% if data %}
         {% for item in data %}
-            <li>{{ item.product_id }} - {{ item.count }}</li>
+            {#            <li>{{ item.product_id }} - {{ item.count }}</li>#}
+            <div class="cart-product flex-between">
+{#                <div class="cart-product-img" style="background-image: url({% static 'images/'|add:product.img %}"></div>#}
+                <a href="/product/1">
+                    <div class="cart-product-img" style="background-image: url({% static 'images/8d261abc4c96bfbde4cb9d117e63ffc8.webp' %}"></div>
+                </a>
+                <div class="cart-product-title">
+                    <a href="/product/1">Notebook Acer Aspire 7 A715-42G-R3EZ</a>
+                </div>
+                <div class="cart-product-count">
+                    <span class="minus">
+                        <i class="icon-minus-outline"></i>
+                    </span>
+                    <input type="number" min="1" value="{{ item.count }}">
+                    <span class="plus">
+                        <i class="icon-plus-outline"></i>
+                    </span>
+                </div>
+                <div class="cart-product-price">1000$</div>
+                <div class="cart-product-remove">
+                    <i class="icon-trash-empty"></i>
+                </div>
+            </div>
         {% endfor %}
+        <div class="checkout">
+            <button class="btn">Checkout</button>
+        </div>
     {% else %}
         <div class="empty-cart"><i class="icon-warning-empty"></i> empty cart</div>
     {% endif %}
