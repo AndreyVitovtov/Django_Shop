@@ -101,6 +101,26 @@ header {
     color: var(--iconsColorHover);
 }
 
+.header-cart {
+    position: relative;
+}
+
+.count-products-in-cart {
+    position: absolute;
+    font-size: 10px;
+    background-color: var(--buttonTxtColor);
+    color: #fff;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+}
+
 main {
     min-height: 70vh;
 }
