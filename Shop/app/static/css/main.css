@@ -173,26 +173,22 @@ main .product-add-to-cart a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
     border-radius: 5px;
     width: 100px;
     font-size: 18px;
     background-color: var(--buttonBgColor);
     transition: 0.2s;
+    color: var(--buttonTxtColor);
+    padding: 5px 10px 5px 5px;
 }
 
 main .product-add-to-cart i {
     font-size: var(--iconsSize);
 }
 
-main .product-add-to-cart a {
-    color: var(--iconsColor);
-    transition: 0.2s;
-    padding-right: 10px;
-}
-
 main .product-add-to-cart a:hover {
-    color: var(--iconsColorHover);
+    color: var(--buttonTxtColorHover);
+    background-color: var(--buttonBgColorHover);
 }
 
 footer {
