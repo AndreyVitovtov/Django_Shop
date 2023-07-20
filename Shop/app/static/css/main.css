@@ -102,7 +102,6 @@ header {
 }
 
 main {
-    /* TODO: delete after adding content */
     min-height: 70vh;
 }
 
@@ -110,16 +109,77 @@ main .content {
     display: flex;
 }
 
-main .main-catalog, main .main-content {
-    padding: 20px var(--padding);
+main .main-content {
+    padding: 10px;
+    width: 100%;
 }
 
-main .main-catalog {
+main .main-categories {
     width: 20%;
     border-right: solid 1px var(--headerBg);
     height: 100%;
-    /* TODO: delete after adding content */
     min-height: 70vh;
+}
+
+main .main-categories a {
+    display: block;
+    padding: 10px var(--padding);
+    color: var(--TextColor)
+}
+
+main .main-categories a:hover, main .main-categories a.active {
+    background-color: var(--buttonBgColor);
+    color: var(--buttonTxtColor)
+}
+
+main .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;;
+    gap: 10px;
+    padding-right: var(--padding);
+}
+
+main .products .product {
+    border: 1px solid var(--headerBg);
+    padding: 10px;
+}
+
+main .product-img {
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .product-title {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+main .product-title a {
+    color: var(--iconsColor);
+}
+
+main .product-price {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--buttonTxtColor);
+}
+
+main .product-add-to-cart {
+    font-size: var(--iconsSize);
+}
+
+main .product-add-to-cart a {
+    color: var(--iconsColor);
+    transition: 0.2s;
+}
+
+main .product-add-to-cart a:hover {
+    color: var(--iconsColorHover);
 }
 
 footer {

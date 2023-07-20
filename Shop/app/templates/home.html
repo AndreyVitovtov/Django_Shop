@@ -1,13 +1,40 @@
 {% extends 'main.html' %}
-
+{% load static %}
 
 {% block main %}
-<div class="content">
-    <div class="main-catalog">
-        Catalog
+    <div class="content">
+        <div class="main-categories">
+            {% for category in categories %}
+                <a href="/category/{{ category.id }}"
+                   class="{% if selected_category and selected_category == category.id %}active{% endif %}">
+                    {{ category.title }}
+                </a>
+            {% endfor %}
+        </div>
+        <div class="main-content products">
+            {% for product in products %}
+                <div class="product">
+                    <a href="/product/{{ product.id }}">
+                    {{ img_exists }}
+                        <div class="product-img"
+                             style="background-image: url({% static 'images/'|add:product.img %}">
+                        </div>
+                    </a>
+                    <div class="product-title">
+                        <a href="/product/{{ product.id }}">{{ product.title }}</a>
+                    </div>
+                    <div class="flex-between">
+                        <div class="product-price">
+                            {{ product.price }}$
+                        </div>
+                        <div class="product-add-to-cart">
+                            <a href="">
+                                <i class="icon-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-    <div class="main-content">
-        MAIN CONTENT
-    </div>
-</div>
 {% endblock %}
