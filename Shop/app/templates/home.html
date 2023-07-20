@@ -1,6 +1,12 @@
 {% extends 'main.html' %}
 {% load static %}
 
+{% block cart %}
+    {% if count_in_cart %}
+        <span class="count-products-in-cart">{{ count_in_cart }}</span>
+    {% endif %}
+{% endblock %}
+
 {% block main %}
     <div class="content">
         <div class="main-categories">

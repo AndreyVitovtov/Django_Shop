@@ -7,6 +7,10 @@
 
 {% block title %}Cart | {% endblock %}
 
+{% block cart %}
+    <span class="count-products-in-cart">2</span>
+{% endblock %}
+
 {% block main %}
     {% if data %}
         {% for item in data %}

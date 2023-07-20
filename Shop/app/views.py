@@ -95,13 +95,14 @@ def home(req):
             }
         ],
         'selected_category': 2,
-        'products': list(map(images_exists, products))
+        'products': list(map(images_exists, products)),
+        'count_in_cart': Cart.objects.filter(customer_id=1).count()
     }))
 
 
 def cart(req):
     return HttpResponse(render(req, 'cart.html', {
-        'data': Cart.objects.all()
+        'data': Cart.objects.filter(customer_id=1)
     }))
 
 
