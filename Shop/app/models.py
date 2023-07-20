@@ -14,3 +14,6 @@ class Cart(models.Model):
     added = models.DateTimeField(default=timezone.now)
     customer_id = models.IntegerField(null=False)
     product_id = models.IntegerField(null=False)
+
+
+# Customer.objects.create(email='andrey.vitovtov@gmail.com', password='12345678', name='Andrii')
